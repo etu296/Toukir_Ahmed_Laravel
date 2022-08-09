@@ -29,4 +29,10 @@ class BackgroundImageController extends Controller
       return redirect()->back()->with('msg' , 'Image added Successfully!');
     }
 
+    public function delete(Request $request, $id)
+    {
+      Image::find($id)->delete();
+      return redirect()->back()->with('msg' , 'Image deleted Successfully!');
+    }
+
 }

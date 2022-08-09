@@ -87,7 +87,7 @@
                       <th>{{$achivment->year}}</th>
                       <th>
                       <a href="" class="btn btn-warning" ><i class="fas fa-edit"></i></a>         
-                      <a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                      <a href="{{route('acivement.delete',$achivment->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                       </th>
 
                     </tr>

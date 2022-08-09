@@ -40,4 +40,11 @@ class AchivementController extends Controller
 
         return redirect()->back()->with('msg','Successfully send your message!');
     }
+
+    public function delete(Request $request, $id)
+    {
+     Achivement::find($id)->delete();
+     return redirect()->back()->with('msg','Deleted  successfully!');
+
+    }
 }
