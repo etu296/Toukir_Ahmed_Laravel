@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AchivementController;
 use App\Http\Controllers\BackgroundImageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
@@ -27,5 +28,9 @@ Route::post('/store',[BackgroundImageController::class,'store'])->name('Backgrou
 //contact
 Route::get('/contact-list',[ContactController::class,'view'])->name('contact-list');
 Route::post('/contact-store',[ContactController::class,'store'])->name('contact-store');
+
+//contact
+Route::get('/achivement-list',[AchivementController::class,'view'])->name('achivement-list');
+Route::post('/achivement-store',[AchivementController::class,'store'])->name('achivment.store');
 
 

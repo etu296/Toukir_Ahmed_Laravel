@@ -502,102 +502,31 @@
         <div class="section-title">
           <h2>Achievement</h2>
         </div>
+        @foreach($achivments as $achivment)
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/blogs/25.jpg" class="img-fluid" alt="">
+            <img src="{{url('/storage/'.$achivment->image)}}"  class="img-fluid" alt="please upload image">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>National Education Week Competition</h3>
+            <h3>{{$achivment->name}}</h3>
           <br>
             <div class="row">
               <div class="col-lg-8">
                 <ul>
                   <li> <strong>Name:</strong> <span>
-                    Jatio Sikkha Soptaho Competition 2016
+                   {{$achivment->name}}
                    </span></li>
-                  <li> <strong>Category:</strong> <span>Folk Music Artiste</span></li>
-                  <li> <strong>Position:</strong> <span>Champion</span></li>
-                  <li> <strong>Year:</strong> <span>2016</span></li>
+                  <li> <strong>Category:</strong> <span>{{$achivment->category}}</span></li>
+                  <li> <strong>Position:</strong> <span>{{$achivment->position}}</span></li>
+                  <li> <strong>Year:</strong> <span>{{$achivment->year}}</span></li>
                 </ul>
+               
               </div>
             </div>
           </div>
         </div>
-<br>
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/blogs/4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Jatiyo Shishu Puraskar Protijogita</h3>
-            <br>
-             <div class="row">
-               <div class="col-lg-8">
-                 <ul>
-                   <li> <strong>Name:</strong> <span>
-                     Jatiyo Shishu Puraskar Protijogita
-                    </span></li>
-                   <li> <strong>Category:</strong> <span>Desher gaan</span></li>
-                   <li> <strong>Position:</strong> <span>Champion</span></li>
-                   <li> <strong>Year:</strong> <span>2011,2012,2013,2014</span></li>
-                </ul>
-              </div>
-              
-            </div>
-            
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/blogs/26.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Multiple time National Champion. </h3>
-           <br>
-            <div class="row">
-              <div class="col-lg-8">
-                <ul>
-                  <li> <strong>Name:</strong> <span>
-                    Multiple time National Champion. 
-                   </span></li>
-                  <li> <strong>Category:</strong> <span>Nazrul Sangeet</span></li>
-                  <li> <strong>Position:</strong> <span>Champion</span></li>
-                  <li> <strong>Year:</strong> <span>2012</span></li>
-                </ul>
-              </div>
-              
-            </div>
-            
-          </div>
-        </div>
-<br>
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/blogs/27.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>National Children's Award Competition.</h3>
-           <br>
-            <div class="row">
-              <div class="col-lg-8">
-                <ul>
-                  <li> <strong>Name:</strong> <span>
-                    National Children's Award Competition.
-                   </span></li>
-                  <li> <strong>Category:</strong> <span>Folk Music</span></li>
-                  <li> <strong>Position:</strong> <span>Champion</span></li>
-                  <li> <strong>Year:</strong> <span>2012</span></li>
-                </ul>
-              </div>
-             
-            </div>
-           
-          </div>
-        </div>
-
-        </div>
+        @endforeach
 
       </div>
     </section><!-- End Portfolio Section -->
@@ -663,6 +592,15 @@
               @if(session()->has('msg'))
               <p class="alert alert-success">{{session()->get('msg')}}</p>
               @endif
+              @if ($errors->any())
+                <div class="alert alert-danger">
+                <ul>
+                  @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                </div>
+             @endif
             </form>
           </div>
 

@@ -61,6 +61,7 @@
                       <th style="width: 10px">#</th>
                       <th>Image name</th>
                       <th style="width: 40px">Image</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -69,6 +70,10 @@
                       <th style="width: 10px">{{$key+1}}</th>
                       <th>{{$image->image}}</th>
                       <th style="width: 40px"><img src="{{url('/storage/'.$image->image)}}" width="100px;" alt="please upload image"></th>
+                      <th>
+                        <a href="" class="btn btn-warning" ><i class="fas fa-edit"></i></a>         
+                        <a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                      </th>
                     </tr>
                     @endforeach
                   </tbody>
