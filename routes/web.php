@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BackgroundImageController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UploadImageController;
@@ -23,5 +24,8 @@ Route::get('/website',[HomeController::class,'view'])->name('website');
 Route::get('/list',[BackgroundImageController::class,'view'])->name('list');
 Route::post('/store',[BackgroundImageController::class,'store'])->name('BackgroundImage.store');
 
+//contact
+Route::get('/contact-list',[ContactController::class,'view'])->name('contact-list');
+Route::post('/contact-store',[ContactController::class,'store'])->name('contact-store');
 
 
