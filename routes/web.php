@@ -3,6 +3,7 @@
 use App\Http\Controllers\BackgroundImageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UploadImageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,7 @@ Route::get('/website',[HomeController::class,'view'])->name('website');
 
 //backgroun Image
 Route::get('/list',[BackgroundImageController::class,'view'])->name('list');
-Route::post('/store',[BackgroundImageController::class,'store'])->name('store');
+Route::post('/store',[BackgroundImageController::class,'store'])->name('BackgroundImage.store');
+
+
+
