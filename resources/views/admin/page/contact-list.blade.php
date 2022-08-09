@@ -22,14 +22,15 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($contacts as $key=>$contact)
                     <tr>
-                      <td>1.</td>
-                      <td>Update software</td>
-                      <td><span class="badge bg-danger">55%</span></td>
-                      <td><span class="badge bg-danger">55%</span></td>
-                      <td><span class="badge bg-danger">55%</span></td>
-
+                      <td>{{$key+1}}</td>
+                      <td>{{$contact->name}}</td>
+                      <td>{{$contact->email}}</td>
+                      <td>{{$contact->subject}}</td>
+                      <td>{{$contact->message}}</td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

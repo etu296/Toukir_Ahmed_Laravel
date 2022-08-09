@@ -56,6 +56,7 @@
               <div class="card-body">
                 <table class="table table-bordered">
                   <thead>
+                    
                     <tr>
                       <th style="width: 10px">#</th>
                       <th>Image name</th>
@@ -63,11 +64,13 @@
                     </tr>
                   </thead>
                   <tbody>
+                  @foreach($images as $key=>$image)
                     <tr>
-                      <td>1.</td>
-                      <td>Update software</td>
-                      <td><span class="badge bg-danger">55%</span></td>
+                      <th style="width: 10px">{{$key+1}}</th>
+                      <th>{{$image->image}}</th>
+                      <th style="width: 40px"><img src="{{url('/storage/'.$image->image)}}" width="100px;" alt="please upload image"></th>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

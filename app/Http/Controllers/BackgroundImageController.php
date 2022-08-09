@@ -8,7 +8,8 @@ class BackgroundImageController extends Controller
 {
     public function view()
     {
-        return view('admin.page.image');
+      $images = Image::all();
+        return view('admin.page.image',compact('images'));
     }
     public function store(Request $request)
     {

@@ -658,7 +658,7 @@
                 <label for="name">Message</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
-             
+              
               <button type="submit" class="btn btn-primary">Submit</button>
               @if(session()->has('msg'))
               <p class="alert alert-success">{{session()->get('msg')}}</p>
