@@ -41,7 +41,7 @@
           </li>
          
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('blogs-list')}}" class="nav-link">
               <i class="nav-icon fa fa-file-image"></i>
               <p>
                 Blogs

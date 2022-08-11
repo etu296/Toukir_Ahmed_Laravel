@@ -39,7 +39,7 @@ Route::get('/delete-achivement/{id}',[AchivementController::class,'delete'])->na
 
 //Blogs
 Route::get('/blogs-list',[BlogsController::class,'view'])->name('blogs-list');
-Route::post('/blogs-store',[BlogsController::class,'store'])->name('blogd.store');
+Route::post('/blogs-store',[BlogsController::class,'store'])->name('blogs.store');
 Route::get('/delete-blogs/{id}',[BlogsController::class,'delete'])->name('blogs.delete');
 
 
