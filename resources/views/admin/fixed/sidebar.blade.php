@@ -5,9 +5,7 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
+        
         <div class="info">
           <a href="#" class="d-block">Toukir Ahmed (Admin)</a>
         </div>
@@ -45,6 +43,24 @@
               <i class="nav-icon fa fa-file-image"></i>
               <p>
                 Blogs
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('show-list')}}" class="nav-link">
+              <i class="nav-icon fa fa-file-image"></i>
+              <p>
+                Shows
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('awards-list')}}" class="nav-link">
+              <i class="nav-icon fa fa-trophy"></i>
+              <p>
+                Awards
               </p>
             </a>
           </li>

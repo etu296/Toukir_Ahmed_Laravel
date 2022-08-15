@@ -32,14 +32,20 @@ Route::get('/delete-bgimage/{id}',[BackgroundImageController::class,'delete'])->
 Route::get('/contact-list',[ContactController::class,'view'])->name('contact-list');
 Route::post('/contact-store',[ContactController::class,'store'])->name('contact-store');
 
-//contact
+//achivement
 Route::get('/achivement-list',[AchivementController::class,'view'])->name('achivement-list');
 Route::post('/achivement-store',[AchivementController::class,'store'])->name('achivment.store');
+Route::get('/achivement-list/edit/{id}',[AchivementController::class,'Edit'])->name('achivement.edit');
 Route::get('/delete-achivement/{id}',[AchivementController::class,'delete'])->name('acivement.delete');
 
 //Blogs
 Route::get('/blogs-list',[BlogsController::class,'view'])->name('blogs-list');
-Route::post('/blogs-store',[BlogsController::class,'store'])->name('blogs.store');
+Route::post('/blogs-store/tv',[BlogsController::class,'store'])->name('blogs.store');
+Route::get('/blogs-list/shows',[BlogsController::class,'viewShow'])->name('show-list');
+Route::post('/blogs-store/shows',[BlogsController::class,'storeShows'])->name('blogs.store.shows');
+Route::get('/blogs-list/awards',[BlogsController::class,'viewAwards'])->name('awards-list');
+Route::post('/blogs-store/Awards',[BlogsController::class,'storeAwards'])->name('blogs.store.awards');
 Route::get('/delete-blogs/{id}',[BlogsController::class,'delete'])->name('blogs.delete');
-
+Route::get('/delete-awards-blogs/{id}',[BlogsController::class,'deleteAwards'])->name('awards.delete');
+Route::get('/delete-show-blogs/{id}',[BlogsController::class,'deleteShows'])->name('shows.delete');
 

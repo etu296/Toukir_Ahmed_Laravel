@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Show extends Model
 {
     use HasFactory;
-    protected $table = 'blogs';
-    protected $fillable= ['image1'];
-
-   
-    
+    protected $table= 'shows';
+    protected $fillable = [
+        'filenames'
+    ];
+  
+ 
+  
 }

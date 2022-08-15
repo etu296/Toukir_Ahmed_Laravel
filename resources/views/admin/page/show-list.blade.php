@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Blogs</h1>
+            <h1 class="m-0">Shows</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blogs</li>
+              <li class="breadcrumb-item active">Shows</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -39,18 +39,18 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Upload Image for TV</h3>
+                <h3 class="card-title">Upload Image for Shows</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('blogs.store')}}"  method="POST" enctype="multipart/form-data" >
+              <form action="{{route('blogs.store.shows')}}"  method="POST" enctype="multipart/form-data" >
               @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputFile">Image for TV Programms*</label>
+                    <label for="exampleInputFile">Image for TV Shows*</label>
                     <div class="input-group">
                       <div class="custom-file">
-                      <input  name="image1" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <input  name="filenames" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                       </div>
                     </div>
                   </div>
@@ -78,18 +78,18 @@
                     
                     <tr>
                       <th style="width: 10px">#</th>
-                      <th >Image</th>
+                      <th style="width: 40px">Image</th>
                       <th style="width: 40px">Action</th>
+                    
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach($blogs as $key=>$blog)
+                  @foreach($shows as $key=>$show)
                     <tr>
                       <th style="width: 10px">{{$key+1}}</th>
-                      <th style="width: 40px"><img src="{{url('/storage/'.$blog->image1)}}" width="100px;" alt="please upload image"></th>
+                      <th style="width: 40px"><img src="{{url('/storage/'.$show->filenames)}}" width="100px;" alt="please upload image"></th>
                       <th>
-                        <a href="" class="btn btn-warning" ><i class="fas fa-edit"></i></a>         
-                        <a href="{{route('blogs.delete',$blog->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                        <a href="{{route('shows.delete',$show->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                       </th>
                     </tr>
                     @endforeach
@@ -97,9 +97,5 @@
                 </table>
               </div>
 </div>   
-
-
-
-
 
 @endsection

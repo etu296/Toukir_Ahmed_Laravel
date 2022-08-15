@@ -39,18 +39,18 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Upload Image for TV</h3>
+                <h3 class="card-title">Upload Image for Awards</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('blogs.store')}}"  method="POST" enctype="multipart/form-data" >
+              <form action="{{route('blogs.store.awards')}}"  method="POST" enctype="multipart/form-data" >
               @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputFile">Image for TV Programms*</label>
+                    <label for="exampleInputFile">Image for Awards*</label>
                     <div class="input-group">
                       <div class="custom-file">
-                      <input  name="image1" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <input  name="awards" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                       </div>
                     </div>
                   </div>
@@ -78,18 +78,17 @@
                     
                     <tr>
                       <th style="width: 10px">#</th>
-                      <th >Image</th>
+                      <th style="width: 40px">Image</th>
                       <th style="width: 40px">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach($blogs as $key=>$blog)
+                  @foreach($awards as $key=>$award)
                     <tr>
                       <th style="width: 10px">{{$key+1}}</th>
-                      <th style="width: 40px"><img src="{{url('/storage/'.$blog->image1)}}" width="100px;" alt="please upload image"></th>
+                      <th style="width: 40px"><img src="{{url('/storage/'.$award->awards)}}" width="100px;" alt="please upload image"></th>
                       <th>
-                        <a href="" class="btn btn-warning" ><i class="fas fa-edit"></i></a>         
-                        <a href="{{route('blogs.delete',$blog->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                        <a href="{{route('awards.delete',$award->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                       </th>
                     </tr>
                     @endforeach

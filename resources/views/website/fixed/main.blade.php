@@ -256,238 +256,29 @@
     
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/13.jpeg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/13.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                  </div>
+                @foreach($blogs as $blog)
+                <img src="{{url('/storage/'.$blog->image1)}}" class="img-fluid" alt="">
+                  @endforeach
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/4.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/1.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/25.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/25.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/26.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/26.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/27.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/27.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/28.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/28.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/11.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
-                  </div>
+                @foreach($shows as $show)
+                <img src="{{url('/storage/'.$show->filenames)}}" class="img-fluid" alt="">
+                  @endforeach
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/6.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
+                @foreach($awards as $award)
+                <img src="{{url('/storage/'.$award->awards)}}" class="img-fluid" alt="">
+                  @endforeach
+
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/21.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/21.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/16.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/16.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/2.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/22.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/22.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/23.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/23.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/24.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/24.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/15.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/15.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/17.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/17.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/5.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/7.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/8.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/3.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/14.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/14.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/19.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/19.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/13.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"></a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/13.jpg"  class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/blogs/18.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-links">
-                    <a href="assets/img/blogs/18.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                  </div>
-                </div>
-              </div>
-    
             </div>
     
           </div>
