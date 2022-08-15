@@ -37,6 +37,8 @@ Route::get('/achivement-list',[AchivementController::class,'view'])->name('achiv
 Route::post('/achivement-store',[AchivementController::class,'store'])->name('achivment.store');
 Route::get('/achivement-list/edit/{id}',[AchivementController::class,'Edit'])->name('achivement.edit');
 Route::get('/delete-achivement/{id}',[AchivementController::class,'delete'])->name('acivement.delete');
+Route::put('/update-achivement/{id}',[AchivementController::class,'update'])->name('acivement.update');
+
 
 //Blogs
 Route::get('/blogs-list',[BlogsController::class,'view'])->name('blogs-list');

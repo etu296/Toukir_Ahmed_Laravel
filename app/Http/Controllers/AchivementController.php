@@ -41,6 +41,44 @@ class AchivementController extends Controller
         return redirect()->back()->with('msg','Successfully send your message!');
     }
 
+    public function edit($id)
+    {
+      $achivements=Achivement::find($id);
+     
+     if($achivements)
+     {
+      return view('admin.page.edit-achivement',compact('achivements'));
+     }
+    }
+
+    public function update(Request $request,$id)
+    {
+      
+      $achivements=Achivement::find($id);
+      $achivementimage=$achivements->image;
+      if ($request->hasFile('image'))
+           {
+            // step 2: generate file name
+            $achivementimage = $request->file('image')->getClientOriginalName();
+            //step 3 : store into project directory
+            $request->file('image')->storeAs('/storage',$achivementimage);
+
+              
+           }
+           if($achivements)
+           {
+        $achivements->update([
+            'name'=>$request->name,
+            'category'=>$request->category,
+            'position'=>$request->position,
+            'year'=>$request->year,
+            'image'=> $achivementimage
+          
+        ]);
+        return redirect()->back()->with('msg', ' Updated Successfully.');
+      }
+    }
+
     public function delete(Request $request, $id)
     {
      Achivement::find($id)->delete();

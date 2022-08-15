@@ -358,7 +358,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="{{route('contact-store')}}" method="post"  class="" enctype="multipart/form-data">
+            <form action="{{route('contact-store')}}" method="post"  class="ContactForm" enctype="multipart/form-data">
               @csrf
               <div class="row">
                 <div class="form-group col-md-6">
