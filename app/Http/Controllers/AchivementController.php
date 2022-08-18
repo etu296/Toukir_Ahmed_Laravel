@@ -38,7 +38,7 @@ class AchivementController extends Controller
             'image'=> $filename
         ]);
 
-        return redirect()->back()->with('msg','Successfully send your message!');
+        return redirect()->back()->with('msg','Successfully created!');
     }
 
     public function edit($id)

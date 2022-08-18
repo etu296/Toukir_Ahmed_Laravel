@@ -40,7 +40,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="{{url('assets/img/toukir.jpg')}}" alt="" class="img-fluid rounded-circle">
+        <img src="{{url('/storage/'.$abouts[0]->image)}}" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Toukir Ahmed</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -87,7 +87,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/toukir.jpg" class="img-fluid" alt="">
+            <img src="{{url('/storage/'.$abouts[0]->image)}}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Singer </h3>
@@ -100,15 +100,15 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 May, 1999</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+8801746821669</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{$abouts[0]->phone}}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Dhaka,Bangladesh</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>toukirahamed41@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{$abouts[0]->age}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{$abouts[0]->degree}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>{{$abouts[0]->email}}</span></li>
                 </ul>
               </div>
             </div>

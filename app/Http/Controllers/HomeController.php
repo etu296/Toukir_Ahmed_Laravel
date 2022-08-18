@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Achivement;
 use App\Models\Award;
 use App\Models\Blog;
@@ -16,6 +17,7 @@ class HomeController extends Controller
         $shows = Show::all();
         $awards = Award::all();
         $blogs = Blog::all();
-        return view('website.fixed.main',compact('achivments','shows','awards','blogs'));
+        $abouts = About::all();
+        return view('website.fixed.main',compact('achivments','shows','awards','blogs','abouts'));
     }
 }

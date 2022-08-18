@@ -46,24 +46,24 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name of the event">
+                    <input name="name" required type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name of the event">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Category</label>
-                    <input name="category" type="text" class="form-control" id="exampleInputPassword1" placeholder="enter category">
+                    <input name="category" required type="text" class="form-control" id="exampleInputPassword1" placeholder="enter category">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Position</label>
-                    <input name="position" type="text" class="form-control" id="exampleInputPassword1" placeholder="entery your position">
+                    <input name="position" required type="text" class="form-control" id="exampleInputPassword1" placeholder="entery your position">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Year</label>
-                    <input name="year" type="year" class="form-control" id="exampleInputPassword1" placeholder="enter year">
+                    <input name="year" required type="year" class="form-control" id="exampleInputPassword1" placeholder="enter year">
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputPassword1">Image</label>
-                    <input name="image" type="file" class="form-control" id="exampleInputPassword1" placeholder="enter image">
+                    <input name="image" required type="file" class="form-control" id="exampleInputPassword1" placeholder="enter image">
                   </div>
                 </div>
                 <!-- /.card-body -->

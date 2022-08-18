@@ -20,7 +20,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="{{route('dashboard')}}" class="nav-link active">
+            <a href="{{route('dashboard')}}" class="nav-link" >
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -29,11 +29,12 @@
            
             
           </li>
+         
           <li class="nav-item">
-            <a href="{{route('list')}}" class="nav-link">
-              <i class="nav-icon fa fa-camera-retro"></i>
+            <a href="{{route('about-list')}}" class="nav-link">
+              <i class="nav-icon fa fa-user"></i>
               <p>
-                Background Image
+                About
               </p>
             </a>
           </li>

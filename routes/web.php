@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AchivementController;
 use App\Http\Controllers\BackgroundImageController;
 use App\Http\Controllers\BlogsController;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/dashboard',[DashboardController::class,'view'])->name('dashboard');
+Route::get('/',[DashboardController::class,'view'])->name('dashboard');
 Route::get('/website',[HomeController::class,'view'])->name('website');
 
 //backgroun Image
@@ -38,6 +39,13 @@ Route::post('/achivement-store',[AchivementController::class,'store'])->name('ac
 Route::get('/achivement-list/edit/{id}',[AchivementController::class,'Edit'])->name('achivement.edit');
 Route::get('/delete-achivement/{id}',[AchivementController::class,'delete'])->name('acivement.delete');
 Route::put('/update-achivement/{id}',[AchivementController::class,'update'])->name('acivement.update');
+
+//about
+Route::get('/about-list',[AboutController::class,'view'])->name('about-list');
+Route::post('/about-store',[AboutController::class,'store'])->name('about.store');
+Route::get('/about-list/edit/{id}',[AboutController::class,'Edit'])->name('about.edit');
+Route::get('/delete-about/{id}',[AboutController::class,'delete'])->name('about.delete');
+Route::put('/update-about/{id}',[AboutController::class,'update'])->name('about.update');
 
 
 //Blogs
