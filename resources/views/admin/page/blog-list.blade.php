@@ -88,7 +88,6 @@
                       <th style="width: 10px">{{$key+1}}</th>
                       <th style="width: 40px"><img src="{{url('/storage/'.$blog->image1)}}" width="100px;" alt="please upload image"></th>
                       <th>
-                        <a href="" class="btn btn-warning" ><i class="fas fa-edit"></i></a>         
                         <a href="{{route('blogs.delete',$blog->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                       </th>
                     </tr>

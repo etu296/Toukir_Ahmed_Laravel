@@ -95,7 +95,7 @@ class BlogsController extends Controller
       Blog::find($id)->delete();
       return redirect()->back()->with('msg' , 'Image deleted Successfully!');
     }
-    public function deleteShow(Request $request, $id)
+    public function deleteShows(Request $request, $id)
     {
       Show::find($id)->delete();
       return redirect()->back()->with('msg' , 'Image deleted Successfully!');
