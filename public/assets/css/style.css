@@ -198,7 +198,6 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/tbg3.jpeg") ;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -240,6 +239,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
 }
+.toukirImg{
+  width: 1450px;
+  height: 100vh;
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -254,6 +258,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  .toukirImg{
+    width: 100%;
+    height: 100vh;
   }
 }
 

@@ -67,7 +67,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex  justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-     
+      
+     <img src="{{url('assets/img/tbg3.jpeg')}}" class="toukirImg" alt="">
     </div>
   </section><!-- End Hero -->
 
