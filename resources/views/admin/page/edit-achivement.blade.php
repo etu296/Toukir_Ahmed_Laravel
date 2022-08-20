@@ -69,6 +69,9 @@
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-success">Update</button>
+
+                  <a href="{{route('achivement-list')}}" class="btn btn-danger" >Back</a>         
+
                 </div>
               </form>
             </div>
