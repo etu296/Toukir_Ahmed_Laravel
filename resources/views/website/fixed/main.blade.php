@@ -212,32 +212,31 @@
             </div>
     
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-    
+            @foreach($blogs as $blog)
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                @foreach($blogs as $blog)
+                 <div class="portfolio-wrap">
                 <img src="{{url('/storage/'.$blog->image1)}}" class="img-fluid" alt="">
-                  @endforeach
                 </div>
               </div>
+              @endforeach
+
+              @foreach($shows as $show)
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="portfolio-wrap">
-                @foreach($shows as $show)
-                <img src="{{url('/storage/'.$show->filenames)}}" class="img-fluid" alt="">
-                  @endforeach
+                <img src="{{url('/storage/'.$show->filenames)}}" class="img-fluid" alt=""> 
+                
                 </div>
               </div>
+              @endforeach
 
+              @foreach($awards as $award)
               <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div class="portfolio-wrap">
-                @foreach($awards as $award)
                 <img src="{{url('/storage/'.$award->awards)}}" class="img-fluid" alt="">
-                  @endforeach
-
                 </div>
               </div>
-
+              @endforeach
             </div>
     
           </div>
@@ -255,11 +254,12 @@
         @foreach($achivments as $achivment)
 
         <div class="row">
+
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="{{url('/storage/'.$achivment->image)}}"  class="img-fluid" alt="please upload image">
+            <img src="{{url('/storage/'.$achivment->image)}}" style="margin-top:10px;" class="img-fluid" alt="please upload image">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>{{$achivment->name}}</h3>
+            <h3 style="margin-top:10px;" >{{$achivment->name}}</h3>
           <br>
             <div class="row">
               <div class="col-lg-8">
@@ -275,10 +275,12 @@
               </div>
             </div>
           </div>
+         
         </div>
         @endforeach
-
       </div>
+    
+
     </section><!-- End Portfolio Section -->
 
 
