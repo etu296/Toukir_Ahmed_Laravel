@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UploadImageController;
 use App\Models\Achivement;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/',[DashboardController::class,'view'])->name('dashboard');
 Route::get('/website',[HomeController::class,'view'])->name('website');
+
+//Admin Login
+
+Route::get('/login',[LoginController::class,'view'])->name('login');
 
 //backgroun Image
 Route::get('/list',[BackgroundImageController::class,'view'])->name('list');
