@@ -22,12 +22,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[DashboardController::class,'view'])->name('dashboard');
-Route::get('/website',[HomeController::class,'view'])->name('website');
-
 //Admin Login
-
+Route::get('/website',[HomeController::class,'view'])->name('website');
 Route::get('/login',[LoginController::class,'view'])->name('login');
+Route::post('/doLogin',[LoginController::class,'store'])->name('doLogin');
+
+
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
+    Route::get('/', function () {
+         return view('/');
+    })->name('admin'); 
+
+Route::get('/',[DashboardController::class,'view'])->name('dashboard');
+
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+
 
 //backgroun Image
 Route::get('/list',[BackgroundImageController::class,'view'])->name('list');
@@ -64,3 +73,4 @@ Route::get('/delete-blogs/{id}',[BlogsController::class,'delete'])->name('blogs.
 Route::get('/delete-awards-blogs/{id}',[BlogsController::class,'deleteAwards'])->name('awards.delete');
 Route::get('/delete-show-blogs/{id}',[BlogsController::class,'deleteShows'])->name('shows.delete');
 
+});

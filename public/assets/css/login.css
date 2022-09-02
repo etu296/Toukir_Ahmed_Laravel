@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     color: #555;
-    background-color:#49a15f;
+    background-color:black;
 }
 .login{
     width: 380px;
@@ -79,16 +79,16 @@ body{
     font-family: "Lato", sans-serif;
     color:white;
     text-align: center;
-    background-color:rgb(74, 182, 62);
+    background-color:black;
     box-shadow: 3px 3px 8px #a7aaaf, -3px -3px 8px #fff;
     transition: all .5s;
     letter-spacing: 1px;
 }
 .btn:hover{
-    background-color: rgb(74, 182, 62);
+    background-color: blue;
 }
 .btn:active{
-    background-color: rgb(88, 202, 100);
+    background-color: blue;
 }
 .link{
     padding-top: 21px;

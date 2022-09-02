@@ -9,7 +9,9 @@
         <a href="{{route('website')}}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+      
+      <a href="{{route('logout')}}" class="nav-link">{{auth()->user()->role}}|LogOut</a>
+      
       </li>
     </ul>
 

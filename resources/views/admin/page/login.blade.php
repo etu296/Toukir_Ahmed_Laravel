@@ -10,11 +10,11 @@
 </head>
 <body>
 
-<form action="{{route('do.admin.login')}}" method="post">
+<form action="{{route('doLogin')}}" method="post">
 @csrf
   <div class="login">
  
-<div class="title">Nursery Management System</div>
+<div class="title">Toukir Ahmed-Singer</div>
 <div class="subtitle">Admin Panel</div>  
 <div class="fields">
 <div class="usur">
@@ -26,9 +26,7 @@
   <input type="password" class="pass" name="password" placeholder="password">
 </div>
 </div>
-<!-- <a href="{{route('do.admin.login')}}" method="post"> -->
 <button class="btn">Login</button>
-<!-- </a> -->
 
 </div>
 </form>
